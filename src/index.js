@@ -4,11 +4,12 @@ var debounce = require('lodash.debounce');
 
 const searchRef = document.querySelector('#search-form');
 const btnRef = document.querySelector('.load-more');
+const listImgRef = document.querySelector('.gallery');
 const imgApi = new ImgApi();
 
 searchRef.addEventListener('input', debounce(onSearch, 500));
 btnRef.addEventListener('click', onClick);
-
+btnRef.addEventListener('click', scroll);
 
 function onSearch(event) {
     imgApi.query = event.target.value;
@@ -19,17 +20,15 @@ function onSearch(event) {
 
 function onClick() {
     imgApi.fetchImg(imgApi.query);
-    
      }
     
 
-
 function scroll() {
-    const heightScreen = document.documentElement.clientHeight;
-    const currentHeight = window.document.scrollingElement.offsetHeight;
-    const res = currentHeight + heightScreen;
-    window.scrollTo({
-        top: res,
+    const totalScroll=listImgRef.clientHeight+80
+    setTimeout(() => {
+        window.scrollTo({
+        top: totalScroll,
         behavior: 'smooth'
     })
+    },800) 
 }
