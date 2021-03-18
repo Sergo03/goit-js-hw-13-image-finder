@@ -1,15 +1,12 @@
 import './styles.css';
 import ImgApi from './apiService';
 
-const basicLightbox = require('basiclightbox')
+
 var debounce = require('lodash.debounce');
 
 const searchRef = document.querySelector('#search-form');
 const btnRef = document.querySelector('.load-more');
 const listImgRef = document.querySelector('.gallery');
-
-
-
 
 const imgApi = new ImgApi();
 
@@ -23,13 +20,13 @@ function onSearch(event) {
     imgApi.query = event.target.value;
     imgApi.resetPage();
     imgApi.fetchImg(imgApi.query);
-}
+};
 
 
 
 function onClick() {
     imgApi.fetchImg(imgApi.query);
-     }
+};
     
 
 function scroll() {
@@ -40,4 +37,4 @@ function scroll() {
         behavior: 'smooth'
     })
     },800) 
-}
+};

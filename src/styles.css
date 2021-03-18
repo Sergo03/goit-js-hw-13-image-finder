@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
-   max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 *,
@@ -15,7 +15,7 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-  img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -56,15 +56,15 @@ body {
   object-fit: cover;
 }
 
-.stats{
+.stats {
   text-align: center;
-      display: inline-flex;
+  display: inline-flex;
 }
-.stats-item{
+.stats-item {
   display: flex;
-   margin-left: 10px;
+  margin-left: 10px;
 }
 
-.material-icons{
+.material-icons {
   padding-right: 5px;
 }
