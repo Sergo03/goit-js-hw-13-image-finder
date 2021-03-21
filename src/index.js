@@ -20,6 +20,7 @@ function onSearch(event) {
     imgApi.query = event.target.value;
     imgApi.resetPage();
     imgApi.fetchImg(imgApi.query);
+    
 };
 
 
